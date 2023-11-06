@@ -26,25 +26,25 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lblLuas" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblHasil" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="lblPanjang" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblAngka1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
-                          <Component id="txtPanjang" min="-2" pref="175" max="-2" attributes="0"/>
+                          <Component id="txtAngka1" min="-2" pref="175" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="lblLebar" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblAngka2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="btnHitung" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtLebar" min="-2" pref="175" max="-2" attributes="0"/>
-                              <Component id="txtLuas" alignment="0" min="-2" pref="175" max="-2" attributes="0"/>
+                              <Component id="btnBagi" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtAngka2" min="-2" pref="175" max="-2" attributes="0"/>
+                              <Component id="txtHasil" alignment="0" min="-2" pref="175" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="50" max="32767" attributes="0"/>
+              <EmptySpace pref="51" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -53,20 +53,20 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblPanjang" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtPanjang" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblAngka1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtAngka1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblLebar" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtLebar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblAngka2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtAngka2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-              <Component id="btnHitung" min="-2" max="-2" attributes="0"/>
+              <Component id="btnBagi" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblLuas" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtLuas" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblHasil" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtHasil" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="88" max="32767" attributes="0"/>
           </Group>
@@ -74,34 +74,34 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="lblPanjang">
+    <Component class="javax.swing.JLabel" name="lblAngka1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Panjang"/>
+        <Property name="text" type="java.lang.String" value="Angka1"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtPanjang">
+    <Component class="javax.swing.JTextField" name="txtAngka1">
     </Component>
-    <Component class="javax.swing.JLabel" name="lblLebar">
+    <Component class="javax.swing.JLabel" name="lblAngka2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Lebar"/>
+        <Property name="text" type="java.lang.String" value="Angka2"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtLebar">
+    <Component class="javax.swing.JTextField" name="txtAngka2">
     </Component>
-    <Component class="javax.swing.JButton" name="btnHitung">
+    <Component class="javax.swing.JButton" name="btnBagi">
       <Properties>
         <Property name="text" type="java.lang.String" value="PEMBAGIAN"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnHitungActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBagiActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblLuas">
+    <Component class="javax.swing.JLabel" name="lblHasil">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Luas"/>
+        <Property name="text" type="java.lang.String" value="Hasil"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtLuas">
+    <Component class="javax.swing.JTextField" name="txtHasil">
     </Component>
   </SubComponents>
 </Form>

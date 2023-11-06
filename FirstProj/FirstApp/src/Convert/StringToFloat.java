@@ -4,6 +4,8 @@
  */
 package Convert;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author User
@@ -26,28 +28,28 @@ public class StringToFloat extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblPanjang = new javax.swing.JLabel();
-        txtPanjang = new javax.swing.JTextField();
-        lblLebar = new javax.swing.JLabel();
-        txtLebar = new javax.swing.JTextField();
-        btnHitung = new javax.swing.JButton();
-        lblLuas = new javax.swing.JLabel();
-        txtLuas = new javax.swing.JTextField();
+        lblAngka1 = new javax.swing.JLabel();
+        txtAngka1 = new javax.swing.JTextField();
+        lblAngka2 = new javax.swing.JLabel();
+        txtAngka2 = new javax.swing.JTextField();
+        btnBagi = new javax.swing.JButton();
+        lblHasil = new javax.swing.JLabel();
+        txtHasil = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lblPanjang.setText("Panjang");
+        lblAngka1.setText("Angka1");
 
-        lblLebar.setText("Lebar");
+        lblAngka2.setText("Angka2");
 
-        btnHitung.setText("PEMBAGIAN");
-        btnHitung.addActionListener(new java.awt.event.ActionListener() {
+        btnBagi.setText("PEMBAGIAN");
+        btnBagi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHitungActionPerformed(evt);
+                btnBagiActionPerformed(evt);
             }
         });
 
-        lblLuas.setText("Luas");
+        lblHasil.setText("Hasil");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -56,38 +58,38 @@ public class StringToFloat extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblLuas)
+                    .addComponent(lblHasil)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(lblPanjang)
+                            .addComponent(lblAngka1)
                             .addGap(92, 92, 92)
-                            .addComponent(txtPanjang, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtAngka1, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(lblLebar)
+                            .addComponent(lblAngka2)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(btnHitung)
-                                .addComponent(txtLebar, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtLuas, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(50, Short.MAX_VALUE))
+                                .addComponent(btnBagi)
+                                .addComponent(txtAngka2, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtHasil, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblPanjang)
-                    .addComponent(txtPanjang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblAngka1)
+                    .addComponent(txtAngka1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblLebar)
-                    .addComponent(txtLebar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblAngka2)
+                    .addComponent(txtAngka2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31)
-                .addComponent(btnHitung)
+                .addComponent(btnBagi)
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblLuas)
-                    .addComponent(txtLuas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblHasil)
+                    .addComponent(txtHasil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(88, Short.MAX_VALUE))
         );
 
@@ -95,15 +97,31 @@ public class StringToFloat extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnHitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHitungActionPerformed
+    private void btnBagiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBagiActionPerformed
         // TODO add your handling code here:
-        double p, l, bagi;
-        p = Double.parseDouble(txtPanjang.getText());
-        l = Double.parseDouble(txtLebar.getText());
-        
-        bagi = p / l;
-        txtLuas.setText(String.valueOf(bagi));
-    }//GEN-LAST:event_btnHitungActionPerformed
+        double a, b, bagi;
+        try {
+            a = Double.parseDouble(txtAngka1.getText());
+            b = Double.parseDouble(txtAngka2.getText());
+
+            if (b == 0) {
+                JOptionPane.showMessageDialog(this, "Angka 2 tidak boleh 0", "Message", JOptionPane.INFORMATION_MESSAGE);
+                txtAngka2.setText("");
+                txtAngka2.requestFocus();
+            } else {
+                bagi = a / b;
+                txtHasil.setText(String.valueOf(bagi));
+            }
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Semua angka harus terisi: \n" + e, "Message", JOptionPane.INFORMATION_MESSAGE);
+        }
+
+//        if (txtAngka1.getText().isBlank() || txtAngka2.getText().isBlank()) {
+//            JOptionPane.showMessageDialog(this, "Semua angka harus terisi", "Message", JOptionPane.INFORMATION_MESSAGE);
+//        } else 
+
+    }//GEN-LAST:event_btnBagiActionPerformed
 
     /**
      * @param args the command line arguments
@@ -142,12 +160,12 @@ public class StringToFloat extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnHitung;
-    private javax.swing.JLabel lblLebar;
-    private javax.swing.JLabel lblLuas;
-    private javax.swing.JLabel lblPanjang;
-    private javax.swing.JTextField txtLebar;
-    private javax.swing.JTextField txtLuas;
-    private javax.swing.JTextField txtPanjang;
+    private javax.swing.JButton btnBagi;
+    private javax.swing.JLabel lblAngka1;
+    private javax.swing.JLabel lblAngka2;
+    private javax.swing.JLabel lblHasil;
+    private javax.swing.JTextField txtAngka1;
+    private javax.swing.JTextField txtAngka2;
+    private javax.swing.JTextField txtHasil;
     // End of variables declaration//GEN-END:variables
 }
